@@ -1,3 +1,22 @@
+function check() {
+	   if(localStorage.getItem("username")){
+        let button = document.getElementById("existing");
+        if (!button) {
+            button = document.createElement("button");
+            button.setAttribute("id","existing")
+            button.textContent = "Login as existing user";
+            form.appendChild(button);
+        }
+        button.addEventListener("click", function() {
+            alert("Logged in as " + localStorage.getItem("username"));
+        });
+    }else{
+	   let button = document.getElementById("existing")
+	   button.remove()
+	}
+
+}
+
 function execute(event) {
     event.preventDefault();
 
@@ -12,19 +31,6 @@ function execute(event) {
     } else {
         localStorage.clear();
     }
-
-    if(localStorage.getItem("username")){
-        let button = document.getElementById("existing");
-        if (!button) {
-            button = document.createElement("button");
-            button.setAttribute("id","existing")
-            button.textContent = "Login as existing user";
-            form.appendChild(button);
-        }
-        button.addEventListener("click", function() {
-            alert("Logged in as " + localStorage.getItem("username"));
-        });
-    }
-
+	check()
     alert("Logged in as " + username);
 }
