@@ -17,7 +17,7 @@ function execute(event) {
         let button = document.getElementById("existing");
         if (!button) {
             button = document.createElement("button");
-            button.id = "existing";
+            button.setAttribute(id,"existing")
             button.textContent = "Login as existing user";
             form.appendChild(button);
         }
