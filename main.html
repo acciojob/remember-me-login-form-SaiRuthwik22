@@ -8,15 +8,18 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	<form id="form" onsubmit="execute(event)" >
-		<input type="text" placeholder="Username" id="username" />
-		<label for="username" >Username</label>
-		<input type="password" placeholder="Password" id="password" />
-		<label for="password" >Password</label>
-		<input type="checkbox" id="checkbox" />
-		<label for="checkbox" >Remember me</label>
-		<input type="submit" id="submit" value="Submit" />
-	</form>
+<form id="form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Username" />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Password" />
+
+    <label for="checkbox">Remember me</label>
+    <input type="checkbox" id="checkbox" />
+    
+    <input type="submit" id="submit" value="Submit" onclick="execute(event)" />
+</form>
     <script type="text/javascript" src="./script.js">
 </script>
 
