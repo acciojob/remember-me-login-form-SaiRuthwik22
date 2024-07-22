@@ -1,8 +1,8 @@
 function check() {
 	   if(localStorage.getItem("https://www.svgrepo.com/show/345221/three-dots.svgusername")){
-        let button = document.getElementById("existing");
+        let existing = document.getElementById("existing");
 		   let form = document.getElementById("form")
-        if (!button) {
+        if (existing) {
             button = document.createElement("button");
             button.setAttribute("id","existing")
             button.textContent = "Login as existing user";
