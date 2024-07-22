@@ -1,22 +1,21 @@
-function check() {
-	   if(localStorage.getItem("https://www.svgrepo.com/show/345221/three-dots.svgusername")){
+unction check() {
+    if(localStorage.getItem("username")){
         let existing = document.getElementById("existing");
         if (!existing) {
             button = document.createElement("button");
             button.setAttribute("id","existing")
             button.textContent = "Login as existing user";
             form.appendChild(button);
+            button.addEventListener("click", function() {
+                alert("Logged in as " + localStorage.getItem("username"));
+            });
         }
-        button.addEventListener("click", function() {
-            alert("Logged in as " + localStorage.getItem("username"));
-        });
     }else {
-    let button = document.getElementById("existing");
-    if (button) {
-        button.remove();
+        let button = document.getElementById("existing");
+        if (button) {
+            button.remove();
+        }
     }
-}
-
 }
 
 function execute(event) {
@@ -33,6 +32,6 @@ function execute(event) {
     } else {
         localStorage.clear();
     }
-	check()
+    check()
     alert("Logged in as " + username);
 }
