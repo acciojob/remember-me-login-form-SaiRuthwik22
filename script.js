@@ -1,3 +1,7 @@
+window.onload = function() {
+    check();
+}
+
 function check() {
     let form = document.getElementById("form");
     let button = document.getElementById("existing");
