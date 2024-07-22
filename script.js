@@ -5,14 +5,14 @@ function check() {
     if(localStorage.getItem("username")){
         if (!button) {
             button = document.createElement("button");
-            button.setAttribute("id","existing")
+            button.setAttribute("id","existing");
             button.textContent = "Login as existing user";
             form.appendChild(button);
+            button.addEventListener("click", function() {
+                alert("Logged in as " + localStorage.getItem("username"));
+            });
         }
-        button.addEventListener("click", function() {
-            alert("Logged in as " + localStorage.getItem("username"));
-        });
-    }else {
+    } else {
         if (button) {
             button.remove();
         }
@@ -33,6 +33,6 @@ function execute(event) {
     } else {
         localStorage.clear();
     }
-    check()
+    check();
     alert("Logged in as " + username);
 }
