@@ -10,10 +10,12 @@ function check() {
         button.addEventListener("click", function() {
             alert("Logged in as " + localStorage.getItem("username"));
         });
-    }else{
-	   let button = document.getElementById("existing")
-	   button.remove()
-	}
+    }else {
+    let button = document.getElementById("existing");
+    if (button) {
+        button.remove();
+    }
+}
 
 }
 
