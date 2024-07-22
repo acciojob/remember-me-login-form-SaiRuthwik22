@@ -1,4 +1,6 @@
 window.onload = function() {
+    let form = document.getElementById("form");
+    form.onsubmit = execute; // This will ensure the form doesn't refresh the page
     check();
 }
 
