@@ -1,17 +1,18 @@
-unction check() {
+function check() {
+    let form = document.getElementById("form");
+    let button = document.getElementById("existing");
+
     if(localStorage.getItem("username")){
-        let existing = document.getElementById("existing");
-        if (!existing) {
+        if (!button) {
             button = document.createElement("button");
             button.setAttribute("id","existing")
             button.textContent = "Login as existing user";
             form.appendChild(button);
-            button.addEventListener("click", function() {
-                alert("Logged in as " + localStorage.getItem("username"));
-            });
         }
+        button.addEventListener("click", function() {
+            alert("Logged in as " + localStorage.getItem("username"));
+        });
     }else {
-        let button = document.getElementById("existing");
         if (button) {
             button.remove();
         }
